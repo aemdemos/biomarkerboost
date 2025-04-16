@@ -14,18 +14,24 @@
   --background-color: white;
   --light-color: #f8f8f8;
   --dark-color: #505050;
-  --text-color: #131313;
+  --text-color: #5d666f;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+  --c-citrus: #ef5f17;
+  --c-slate: #5d666f;
+  --c-navy: #004b6e;
+  --c-soft-black: #1b252c;
+  --c-deep-teal: #00727f;
   --body-font-family: "Roboto", "Roboto Fallback", "sans-serif";
   --heading-font-family: "Roboto", "Roboto Fallback", "sans-serif";
-  --body-font-size-m: 30px;
-  --body-font-size-s: 18px;
+  --heading-condensed-font-family: "Roboto Condensed", "Roboto Fallback", "sans-serif";
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
   --body-font-size-xs: 10.72px;
-  --heading-font-size-xxl: 110px;
+  --heading-font-size-xxl: 50px;
   --heading-font-size-xl: 30px;
-  --heading-font-size-l: 48px;
-  --heading-font-size-m: 30px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 20px;
   --heading-font-size-s: 18px;
   --heading-font-size-xs: 10.72px;
   --nav-height: 64px;
@@ -89,13 +95,13 @@
 
 @media (width>=900px) {
   :root {
-    --body-font-size-m: 30px;
-    --body-font-size-s: 18px;
+    --body-font-size-m: 16px;
+    --body-font-size-s: 14px;
     --body-font-size-xs: 10.72px;
-    --heading-font-size-xxl: 110px;
+    --heading-font-size-xxl: 50px;
     --heading-font-size-xl: 30px;
-    --heading-font-size-l: 48px;
-    --heading-font-size-m: 30px;
+    --heading-font-size-l: 24px;
+    --heading-font-size-m: 20px;
     --heading-font-size-s: 18px;
     --heading-font-size-xs: 10.72px;
   }
@@ -108,7 +114,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  line-height: 24px;
 }
 
 body.appear {
@@ -142,14 +148,21 @@ h1 {
 
 h2 {
   font-size: var(--heading-font-size-xl);
+  line-height: 36px;
+  margin: 0;
+  margin-block-end: 24px;
 }
 
 h3 {
   font-size: var(--heading-font-size-l);
+  line-height: 36px;
 }
 
 h4 {
   font-size: var(--heading-font-size-m);
+  line-height: 24px;
+  margin: 0;
+  margin-block-end: 12px;
 }
 
 h5 {
@@ -161,8 +174,19 @@ h6 {
 }
 
 p, dl, ol, ul, pre, blockquote {
+  margin: 0;
   margin-top: 0.8em;
   margin-bottom: 0.25em;
+  margin-block-end: 12px;
+  padding: 0;
+  list-style-position: outside;
+}
+
+ul li {
+  margin: 0;
+  margin-left: 16px;
+  margin-bottom: 4px;
+  padding: 0;
 }
 
 code, pre {
