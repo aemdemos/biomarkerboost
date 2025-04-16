@@ -3,5 +3,7 @@ Please always provide the [GitHub issue(s)](../issues) your PR is for, as well a
 Fix #<gh-issue-id>
 
 Test URLs:
-- Before: https://main--sta-dsp--aemdemos.aem.live/
-- After: https://main--sta-dsp--aemdemos.aem.live/
+- Before: https://main--biomarkerboost--aemdemos.aem.page/
+- After: https://<your-branch>--biomarkerboost--aemdemos.aem.page/
+
+How should your changes be tested:
