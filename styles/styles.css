@@ -21,6 +21,7 @@
   --c-slate: #5d666f;
   --c-navy: #004b6e;
   --c-soft-black: #1b252c;
+  --c-teal: #88d7d4;
   --c-deep-teal: #00727f;
   --body-font-family: "Roboto", "Roboto Fallback", "sans-serif";
   --heading-font-family: "Roboto", "Roboto Fallback", "sans-serif";
@@ -144,40 +145,45 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: var(--heading-font-size-xxl);
+  color: var(--c-teal);
 }
 
 h2 {
   font-size: var(--heading-font-size-xl);
+  color: var(--c-navy);
   line-height: 36px;
   margin: 0;
-  margin-block-end: 24px;
+  margin-bottom: 24px;
 }
 
 h3 {
   font-size: var(--heading-font-size-l);
+  color: var(--c-citrus);
   line-height: 36px;
 }
 
 h4 {
   font-size: var(--heading-font-size-m);
+  color: var(--c-citrus);
   line-height: 24px;
   margin: 0;
-  margin-block-end: 12px;
+  margin-bottom: 12px;
 }
 
 h5 {
   font-size: var(--heading-font-size-s);
+  color: var(--c-navy);
 }
 
 h6 {
   font-size: var(--heading-font-size-xs);
+  color: var(--c-citrus);
 }
 
 p, dl, ol, ul, pre, blockquote {
   margin: 0;
   margin-top: 0.8em;
-  margin-bottom: 0.25em;
-  margin-block-end: 12px;
+  margin-bottom: 12px;
   padding: 0;
   list-style-position: outside;
 }
