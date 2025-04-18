@@ -23,6 +23,8 @@
   --c-soft-black: #1b252c;
   --c-teal: #88d7d4;
   --c-deep-teal: #00727f;
+  --c-light-salmon: #fdefe7;
+  --c-light-pink: #efeff7;
   --body-font-family: "Roboto", "Roboto Fallback", "sans-serif";
   --heading-font-family: "Roboto", "Roboto Fallback", "sans-serif";
   --heading-condensed-font-family: "Roboto Condensed", "Roboto Fallback", "sans-serif";
@@ -295,14 +297,55 @@ main>.section {
   margin: 40px 0;
 }
 
-main>.section>div {
-  max-width: 1200px;
-  margin: auto;
+main > div > div {
+  position: relative;
+  display: block;
+  max-width: 1440px;
   padding: 0 24px;
+  margin: 0 auto;
 }
 
 main>.section:first-of-type {
   margin-top: 0;
+}
+
+.section[data-theme] {
+  margin: 0;
+}
+
+.section[data-theme='deep-teal-gradient'] {
+  background-size: 100% 100%;
+  background-position: 0 0,0 0;
+  background-image: linear-gradient(6deg, #004A71 0%, #237C9A 49%, #35AEB6 100%);
+}
+
+.section[data-theme='light-salmon'] {
+  background-color: var(--c-light-salmon);
+}
+
+.section[data-theme='light-pink'] {
+  background-color: var(--c-light-pink);
+}
+
+.section[data-theme='light-teal-gradient'] {
+  background: linear-gradient(287deg, #e1e1ef, #88d7d4 82.41%);
+  
+  h1 {
+    color: var(--c-navy);
+  }
+}
+
+.section[data-theme='lightest-teal-gradient'] {
+  background: linear-gradient(180deg, #fff, #e7f6f5);
+}
+
+@media (width >= 768px) {
+  .section[data-theme='deep-teal-gradient'] {
+    background-size: 2880px 100%;
+    background-position: 0 0,0 0;
+    background-image: radial-gradient(78% 91% at 51% 96%, #004A71 21%, #0FF0 75%, #0FF0 100%),
+    linear-gradient(90deg, #6E90B6 0%, #3283A1 46%, #2FAAB2 100%);
+  }
 }
 
 @media (width>=900px) {

@@ -1,76 +1,78 @@
-
 .hero-container > .hero-wrapper {
-  max-width: unset;
-  padding: 0;
-  display: flex; /* Enable flexbox for side-by-side layout */
-  flex-direction: row; /* Ensure text and image are side by side */
-  align-items: center; /* Vertically align items */
-  justify-content: space-between; /* Create space between text and image */
-  background: linear-gradient(to right, #f7e2e2 35%, #036 65%); /* Refine proportions */
+ flex-direction: column; /* Stack elements vertically */
 }
 
 .hero-container > .hero-wrapper > .hero > div {
-  display: flex; /* Enable flexbox for second-level layout */
-  flex-direction: row; /* Ensure second-level elements are side by side */
-  align-items: center; /* Vertically align items */
+  flex-direction: column; /* Stack second-level elements vertically */
+}
+
+.hero-container > .hero-wrapper > .hero > div > div {
+  max-width: 100%; /* Allow full width for both text and image */
+  padding: 0; /* Remove padding */
 }
 
 .hero-container > .hero-wrapper > .hero > div > div:first-child {
-  flex: 1; /* Allow the image container to take up half the space */
-  order: 2; /* Position the image on the right */
-  max-width: 50%; /* Restrict image container width */
-  display: flex; /* Enable flexbox within the image container */
   justify-content: center; /* Center the image */
   align-items: center; /* Align the image vertically */
 }
 
-.hero-container > .hero-wrapper > .hero > div > div:last-child {
-  flex: 1; /* Allow the text container to take up half the space */
-  order: 1; /* Position the text on the left */
-  max-width: 50%; /* Restrict text container width */
-  padding-left: 40px; /* Add spacing between text and image */
-  display: flex; /* Enable flexbox within text container */
-  flex-direction: column; /* Stack text elements vertically */
-  justify-content: center; /* Center text vertically */
-  align-items: flex-start; /* Align text to the left */
-}
-
 .hero-container > .hero-wrapper > .hero > div > div:first-child img {
-  object-fit: cover; /* Ensure the image is not stretched */
-  width: 100%; /* Make the image responsive */
+  width: 100%; /* Ensure image scales properly */
   height: auto; /* Maintain aspect ratio */
 }
 
-.hero-container > .hero-wrapper > .hero h1 {
-  margin: 0;
-  line-height: 1.2; /* Adjust line height */
-  font-size: var(--heading-font-size-l); /* Match font size */
-  color: #036;
-}
-
-.hero-container > .hero-wrapper > .hero p {
-  margin: 0 0 10px; /* Adjust spacing */
-  font-size: var(--body-font-size-s); /* Match font size */
-  color: #036;
-}
-
-@media (width <= 768px) {
+@media (width >= 960px) {
   .hero-container > .hero-wrapper {
-    flex-direction: column; /* Stack elements vertically */
-    padding: 20px; /* Add padding for smaller screens */
+    max-width: unset;
+    padding: 0;
+    display: flex; /* Enable flexbox for side-by-side layout */
+    flex-direction: row; /* Ensure text and image are side by side */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Create space between text and image */
   }
-
+  
   .hero-container > .hero-wrapper > .hero > div {
-    flex-direction: column; /* Stack second-level elements vertically */
+    display: flex; /* Enable flexbox for second-level layout */
+    flex-direction: row; /* Ensure second-level elements are side by side */
+    align-items: center; /* Vertically align items */
   }
-
-  .hero-container > .hero-wrapper > .hero > div > div {
-    max-width: 100%; /* Allow full width for both text and image */
-    padding: 0; /* Remove padding */
+  
+  .hero-container > .hero-wrapper > .hero > div > div:first-child {
+    flex: 1; /* Allow the image container to take up half the space */
+    order: 2; /* Position the image on the right */
+    max-width: 50%; /* Restrict image container width */
+    display: flex; /* Enable flexbox within the image container */
+    justify-content: center; /* Center the image */
+    align-items: center; /* Align the image vertically */
   }
-
+  
+  .hero-container > .hero-wrapper > .hero > div > div:last-child {
+    flex: 1; /* Allow the text container to take up half the space */
+    order: 1; /* Position the text on the left */
+    max-width: 50%; /* Restrict text container width */
+    padding-left: 40px; /* Add spacing between text and image */
+    display: flex; /* Enable flexbox within text container */
+    flex-direction: column; /* Stack text elements vertically */
+    justify-content: center; /* Center text vertically */
+    align-items: flex-start; /* Align text to the left */
+  }
+  
   .hero-container > .hero-wrapper > .hero > div > div:first-child img {
-    width: 100%; /* Ensure image scales properly */
+    object-fit: cover; /* Ensure the image is not stretched */
+    width: 100%; /* Make the image responsive */
     height: auto; /* Maintain aspect ratio */
+  }
+  
+  .hero-container > .hero-wrapper > .hero h1 {
+    margin: 0;
+    line-height: 1.2; /* Adjust line height */
+    font-size: var(--heading-font-size-l); /* Match font size */
+    color: #036;
+  }
+  
+  .hero-container > .hero-wrapper > .hero p {
+    margin: 0 0 10px; /* Adjust spacing */
+    font-size: var(--body-font-size-s); /* Match font size */
+    color: #036;
   }
 }
