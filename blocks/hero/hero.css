@@ -21,10 +21,21 @@
   height: auto; /* Maintain aspect ratio */
 }
 
+.hero-container > .hero-wrapper > .hero h1 {
+  margin: 0;
+  line-height: 1.2; /* Adjust line height */
+  font-size: var(--heading-font-size-xxl); /* Match font size */
+  color: #036;
+}
+
+.hero-container > .hero-wrapper > .hero p {
+  margin: 0 0 10px; /* Adjust spacing */
+  font-size: var(--body-font-size-s); /* Match font size */
+}
+
 @media (width >= 960px) {
   .hero-container > .hero-wrapper {
-    max-width: unset;
-    padding: 0;
+    padding: 0 64px;
     display: flex; /* Enable flexbox for side-by-side layout */
     flex-direction: row; /* Ensure text and image are side by side */
     align-items: center; /* Vertically align items */
@@ -37,42 +48,8 @@
     align-items: center; /* Vertically align items */
   }
   
-  .hero-container > .hero-wrapper > .hero > div > div:first-child {
+  .hero-container > .hero-wrapper > .hero > div > div {
     flex: 1; /* Allow the image container to take up half the space */
-    order: 2; /* Position the image on the right */
     max-width: 50%; /* Restrict image container width */
-    display: flex; /* Enable flexbox within the image container */
-    justify-content: center; /* Center the image */
-    align-items: center; /* Align the image vertically */
-  }
-  
-  .hero-container > .hero-wrapper > .hero > div > div:last-child {
-    flex: 1; /* Allow the text container to take up half the space */
-    order: 1; /* Position the text on the left */
-    max-width: 50%; /* Restrict text container width */
-    padding-left: 40px; /* Add spacing between text and image */
-    display: flex; /* Enable flexbox within text container */
-    flex-direction: column; /* Stack text elements vertically */
-    justify-content: center; /* Center text vertically */
-    align-items: flex-start; /* Align text to the left */
-  }
-  
-  .hero-container > .hero-wrapper > .hero > div > div:first-child img {
-    object-fit: cover; /* Ensure the image is not stretched */
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .hero-container > .hero-wrapper > .hero h1 {
-    margin: 0;
-    line-height: 1.2; /* Adjust line height */
-    font-size: var(--heading-font-size-l); /* Match font size */
-    color: #036;
-  }
-  
-  .hero-container > .hero-wrapper > .hero p {
-    margin: 0 0 10px; /* Adjust spacing */
-    font-size: var(--body-font-size-s); /* Match font size */
-    color: #036;
   }
 }
