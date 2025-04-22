@@ -272,12 +272,6 @@ a.button.secondary:hover, a.button.secondary:focus, button.secondary:hover, butt
   cursor: pointer;
 }
 
-.button>.icon {
-  margin-left: 8px;
-  height: 11px;
-  width: 12px;
-  
-}
 
 main img {
   max-width: 100%;
@@ -301,6 +295,13 @@ main img {
 .icon img {
   height: 100%;
   width: 100%;
+}
+
+.button>.icon {
+  margin-left: 8px;
+  height: 11px;
+  width: 12px;
+  
 }
 
 /* sections */
