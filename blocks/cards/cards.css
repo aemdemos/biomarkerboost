@@ -6,10 +6,6 @@
   max-width: 1120px; /* Set max width for the card wrapper */
 }
 
-.hero-wrapper + .cards-container > .cards-wrapper > .cards.block > ul > li {
-  border-radius: 64px; /* Special radius for home page cards immediately following hero */
-}
-
 .cards-wrapper > .cards.block > ul {
   display: flex; /* Use flexbox to align cards side by side */
   flex-direction: row; /* Arrange cards horizontally */
@@ -96,6 +92,10 @@
   color: #666; /* Use gray color for body text */
   margin-bottom: 8px; /* Add more spacing between list items */
   font-weight: 400; /* Increase font weight for better readability */
+}
+
+.hero-container + .cards-container > .cards-wrapper > .cards.block > ul > li {
+  border-radius: 64px; /* Special radius for home page cards immediately following hero */
 }
 
 @media (width <= 768px) {
