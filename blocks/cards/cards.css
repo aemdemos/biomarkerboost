@@ -1,5 +1,13 @@
+.cards-container{
+  background-color: #fdefe7; /* Set card background to white */
+}
+
+.cards-wrapper{
+  max-width: 1120px; /* Set max width for the card wrapper */
+}
 
 .cards-wrapper > .cards.block > ul {
+  background-color: #fdefe7; /* Set card background to white */
   display: flex; /* Use flexbox to align cards side by side */
   flex-direction: row; /* Arrange cards horizontally */
   gap: 20px; /* Adjust horizontal gap to match original spacing */
@@ -10,15 +18,17 @@
 }
 
 .cards-wrapper > .cards.block > ul > li {
-  background-color: var(--background-color); /* Set card background to white */
-  border-radius: 10px; /* Add rounded corners */
-  box-shadow: 0 2px 6px rgb(0 0 0 / 10%); /* Add subtle shadow for elevation */
+  background-color: unset; /* No bg for card container block */
+
+  /* box-shadow: 0 2px 6px rgb(0 0 0 / 10%); Add subtle shadow for elevation */
   overflow: hidden; /* Prevent content overflow */
   padding: 30px 20px; /* Increase internal padding to make cards taller */
+  margin: 10px; /* Reset margin */
+  box-sizing: border-box; /* Include padding and border in element's total width */
   flex: 1; /* Ensure equal card width */
   display: flex; /* Use flexbox for internal card layout */
-  flex-direction: column; /* Stack image and text vertically */
-  align-items: center; /* Center-align all content horizontally */
+  flex-direction: row; /* Stack image and text vertically */
+  column-gap: 18px; /* Add gap between adjacent cards*/
 }
 
 .cards-wrapper > .cards.block > ul > li .cards-card-image {
@@ -36,13 +46,41 @@
 
 .cards-wrapper > .cards.block > ul > li .cards-card-body {
   display: flex; /* Use flexbox for text layout */
+  background-color: var(--background-color); /* Set card background to white */
+  border-radius: 64px; /* Add rounded corners */
+  padding: 64px; /* Increase internal padding to make cards taller */
+  padding-bottom: 128px; /* Increase bottom padding for button spacing */
+  margin: 0; /* Reset margins */
   flex-direction: column; /* Stack text elements vertically */
   align-items: flex-start; /* Align text to the left */
   width: 100%; /* Ensure the body section occupies full width */
+  position: relative; /* Position relative for absolute positioning of button */
+}
+
+.cards-wrapper > .cards.block > ul > li .cards-card-body p {
+  margin-bottom: 24px; /* Add spacing below the title */
+} 
+
+.cards-wrapper > .cards.block > ul > li .cards-card-body p.button-container{
+  position: absolute; /* Position button container absolutely */
+  bottom: -24px; /* Position button at the bottom of each card with 24px spacing */
+  margin-bottom: 64px; /* Add spacing below the button */
+}
+
+.cards-wrapper > .cards.block > ul > li .cards-card-body p picture img{
+  width: 100px; /* Set image width to 100px */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.cards-wrapper > .cards.block > ul > li .cards-card-body h2 {
+  /* font-size: 18px; Adjust font size for title */
+  color: #f60; /* Use orange color for title text */
+  margin-bottom: 15px; /* Add more spacing below the title */
+  font-weight: 600; /* Semi-bold font for better readability */
 }
 
 .cards-wrapper > .cards.block > ul > li .cards-card-body h3 {
-  font-size: 18px; /* Adjust font size for title */
+  /* font-size: 18px; Adjust font size for title */
   color: #f60; /* Use orange color for title text */
   margin-bottom: 15px; /* Add more spacing below the title */
   font-weight: 600; /* Semi-bold font for better readability */
