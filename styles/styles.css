@@ -10,13 +10,13 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-:root {
+ :root {
   --background-color: white;
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #5d666f;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --link-color: #004b6e;
+  --link-hover-color: #ef5f17;
   --c-citrus: #ef5f17;
   --c-slate: #5d666f;
   --c-navy: #004b6e;
@@ -228,7 +228,7 @@ a:hover {
 }
 
 /* buttons */
-a.button:any-link, button {
+a.button:any-link, button.primary {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
@@ -238,7 +238,7 @@ a.button:any-link, button {
   padding: 0.5em 1.2em;
   font-family: var(--body-font-family);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
@@ -261,10 +261,16 @@ button:disabled, button:disabled:hover {
 }
 
 a.button.secondary, button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
+  background-color: white;
+  color: var(--c-navy);
 }
+
+a.button.secondary:hover, a.button.secondary:focus, button.secondary:hover, button.secondary:focus {
+  background-color: var(--link-hover-color);
+  color: var(--light-color);
+  cursor: pointer;
+}
+
 
 main img {
   max-width: 100%;
@@ -283,11 +289,18 @@ main img {
   display: inline-block;
   height: 24px;
   width: 24px;
-}
+} 
 
 .icon img {
   height: 100%;
   width: 100%;
+}
+
+.button>.icon {
+  margin-left: 8px;
+  height: 13px;
+  width: 13px;
+  
 }
 
 /* sections */
