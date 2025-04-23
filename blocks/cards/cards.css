@@ -1,3 +1,7 @@
+.cards .cards-card-body>h2, .cards .cards-card-body>h3, .cards .cards-card-body>h4 {
+  margin-bottom: 18px; /* Add spacing below headings */
+}
+
 .cards-container{
   background-color: #fdefe7; /* Set card background to salmon for testing */
 }
@@ -64,21 +68,13 @@
   margin-bottom: 64px; /* Add spacing below the button */
 }
 
-.cards-wrapper > .cards.block > ul > li .cards-card-body p picture img{
+.cards-wrapper > .cards.block > ul > li .cards-card-body p picture img {
   width: 100px; /* Set image width to 100px */
   height: auto; /* Maintain aspect ratio */
 }
 
 .cards-wrapper > .cards.block > ul > li .cards-card-body h2 {
-  color: #f60; /* Use orange color for title text */
-  margin-bottom: 15px; /* Add more spacing below the title */
-  font-weight: 600; /* Semi-bold font for better readability */
-}
-
-.cards-wrapper > .cards.block > ul > li .cards-card-body h3 {
-  color: #f60; /* Use orange color for title text */
-  margin: 0 0 18px; /* Add more spacing below the title */
-  font-weight: 600; /* Semi-bold font for better readability */
+  color: var(--c-citrus); /* Use orange citrus color for title text */
 }
 
 .cards-wrapper > .cards.block > ul > li .cards-card-body ul {
@@ -89,7 +85,7 @@
 
 .cards-wrapper > .cards.block > ul > li .cards-card-body ul li {
   font-size: 14px; /* Adjust font size for list items */
-  color: #666; /* Use gray color for body text */
+  color: var( --text-color); /* Use gray color for body text */
   margin-bottom: 8px; /* Add more spacing between list items */
   font-weight: 400; /* Increase font weight for better readability */
 }
@@ -98,7 +94,7 @@
   border-radius: 64px; /* Special radius for home page cards immediately following hero */
 }
 
-@media (width <= 768px) {
+@media (width <= 1024px) {
   .cards-wrapper > .cards.block > ul {
     flex-direction: column; /* Stack cards vertically on smaller screens */
     gap: 20px; /* Adjust spacing between stacked cards */
