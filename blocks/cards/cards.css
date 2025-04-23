@@ -1,51 +1,76 @@
+.cards .cards-card-body>h2, .cards .cards-card-body>h3, .cards .cards-card-body>h4 {
+  margin-bottom: 18px; /* Add spacing below headings */
+}
+
+.cards-wrapper{
+  max-width: 1120px; /* Set max width for the card wrapper */
+}
 
 .cards-wrapper > .cards.block > ul {
   display: flex; /* Use flexbox to align cards side by side */
   flex-direction: row; /* Arrange cards horizontally */
-  gap: 20px; /* Adjust horizontal gap to match original spacing */
   list-style: none; /* Remove bullet points */
   margin: 0 auto; /* Center the block horizontally */
-  padding: 0; /* Reset padding */
+  padding: 64px 0; /* section padding */
   justify-content: center; /* Align cards horizontally */
 }
 
 .cards-wrapper > .cards.block > ul > li {
-  background-color: var(--background-color); /* Set card background to white */
-  border-radius: 10px; /* Add rounded corners */
-  box-shadow: 0 2px 6px rgb(0 0 0 / 10%); /* Add subtle shadow for elevation */
+  background-color: var(--background-color); /* White bg for cards */
+
+  /* box-shadow: 0 2px 6px rgb(0 0 0 / 10%); Add subtle shadow for elevation */
   overflow: hidden; /* Prevent content overflow */
-  padding: 30px 20px; /* Increase internal padding to make cards taller */
+  border-radius: 24px; /* Add rounded corners */
+  padding: 64px; /* Increase internal padding to make cards taller */
+  margin: 0 10px; /* Reset margin */
+  box-sizing: border-box; /* Include padding and border in element's total width */
   flex: 1; /* Ensure equal card width */
   display: flex; /* Use flexbox for internal card layout */
   flex-direction: column; /* Stack image and text vertically */
-  align-items: center; /* Center-align all content horizontally */
+  position: relative; /* Position relative for absolute positioning of child elements */
 }
 
 .cards-wrapper > .cards.block > ul > li .cards-card-image {
   display: flex; /* Use flexbox for image layout */
-  justify-content: center; /* Center image horizontally */
+  justify-content: left; /* Center image horizontally */
   align-items: center; /* Center image vertically */
   width: 100%; /* Ensure the image section occupies full width */
   margin-bottom: 24px; /* Increase spacing below the image */
 }
 
 .cards-wrapper > .cards.block > ul > li .cards-card-image img {
-  width: 60px; /* Decrease image size to match original proportions */
+  width: 100px; /* Decrease image size to match original proportions */
   height: auto; /* Maintain aspect ratio */
 }
 
 .cards-wrapper > .cards.block > ul > li .cards-card-body {
   display: flex; /* Use flexbox for text layout */
+  background-color: var(--background-color); /* Set card background to white */
+  padding-bottom: 40px; /* Increase bottom padding for button spacing */
+  margin: 0; /* Reset margins */
   flex-direction: column; /* Stack text elements vertically */
   align-items: flex-start; /* Align text to the left */
   width: 100%; /* Ensure the body section occupies full width */
 }
 
-.cards-wrapper > .cards.block > ul > li .cards-card-body h3 {
-  font-size: 18px; /* Adjust font size for title */
-  color: #f60; /* Use orange color for title text */
-  margin-bottom: 15px; /* Add more spacing below the title */
-  font-weight: 600; /* Semi-bold font for better readability */
+.cards-wrapper > .cards.block > ul > li .cards-card-body p {
+  margin-bottom: 24px; /* Add spacing below the title */
+  margin-top: 0; /* Reset top margin */
+} 
+
+.cards-wrapper > .cards.block > ul > li .cards-card-body p.button-container{
+  position: absolute; /* Position button container absolutely */
+  bottom: -20px; /* Position button at the bottom of each card with 24px spacing */
+  margin-bottom: 64px; /* Add spacing below the button */
+}
+
+.cards-wrapper > .cards.block > ul > li .cards-card-body p picture img {
+  width: 100px; /* Set image width to 100px */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.cards-wrapper > .cards.block > ul > li .cards-card-body h2 {
+  color: var(--c-citrus); /* Use orange citrus color for title text */
 }
 
 .cards-wrapper > .cards.block > ul > li .cards-card-body ul {
@@ -56,12 +81,16 @@
 
 .cards-wrapper > .cards.block > ul > li .cards-card-body ul li {
   font-size: 14px; /* Adjust font size for list items */
-  color: #666; /* Use gray color for body text */
+  color: var( --text-color); /* Use gray color for body text */
   margin-bottom: 8px; /* Add more spacing between list items */
   font-weight: 400; /* Increase font weight for better readability */
 }
 
-@media (width <= 768px) {
+.hero-container + .cards-container > .cards-wrapper > .cards.block > ul > li {
+  border-radius: 64px; /* Special radius for home page cards immediately following hero */
+}
+
+@media (width <= 1024px) {
   .cards-wrapper > .cards.block > ul {
     flex-direction: column; /* Stack cards vertically on smaller screens */
     gap: 20px; /* Adjust spacing between stacked cards */
