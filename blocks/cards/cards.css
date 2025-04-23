@@ -2,10 +2,6 @@
   margin-bottom: 18px; /* Add spacing below headings */
 }
 
-.cards-container{
-  background-color: #fdefe7; /* Set card background to salmon for testing */
-}
-
 .cards-wrapper{
   max-width: 1120px; /* Set max width for the card wrapper */
 }
