@@ -11,6 +11,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  createOptimizedPicture,
 } from './aem.js';
 
 /**
@@ -59,6 +60,22 @@ async function loadFonts() {
   }
 }
 
+function decorateSectionBackgrounds(main) {
+  main.querySelectorAll('.section[data-background]').forEach((section) => {
+    const { background } = section.dataset;
+    // if background is a picture, create an optimized picture
+    if (background.includes('media_')) { // if background is an embedded image
+      const backgroundPicture = createOptimizedPicture(background);
+      backgroundPicture.classList.add('section-background-image');
+      section.prepend(backgroundPicture);
+    } else if (background.startsWith('#')) { // if background is a hex color
+      section.style.backgroundColor = background;
+    } else if (background.includes('deg')) { // if background is a gradient
+      section.setAttribute('style', `background-image: linear-gradient(${background});`);
+    }
+  });
+}
+
 function buildPageDivider(main) {
   const allPageDivider = main.querySelectorAll('code');
 
@@ -101,6 +118,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateSectionBackgrounds(main);
 }
 
 /**
