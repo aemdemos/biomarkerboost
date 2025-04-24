@@ -182,6 +182,12 @@ h6 {
   color: var(--c-citrus);
 }
 
+sup {
+  font-size: 12px;
+  line-height: 18px;
+  vertical-align: super;
+}
+
 p, dl, ol, ul, pre, blockquote {
   margin: 0;
   margin-top: 0.8em;
@@ -363,12 +369,6 @@ main > .section:first-of-type {
     background-position: 0 0,0 0;
     background-image: radial-gradient(78% 91% at 51% 96%, #004A71 21%, #0FF0 75%, #0FF0 100%),
     linear-gradient(90deg, #6E90B6 0%, #3283A1 46%, #2FAAB2 100%);
-  }
-}
-
-@media (width>=900px) {
-  main > div >div {
-    padding: 0 160px;
   }
 }
 

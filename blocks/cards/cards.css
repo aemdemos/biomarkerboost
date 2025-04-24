@@ -2,10 +2,6 @@
   margin-bottom: 18px; /* Add spacing below headings */
 }
 
-.cards-wrapper{
-  max-width: 1120px; /* Set max width for the card wrapper */
-}
-
 .cards-wrapper > .cards.block > ul {
   display: flex; /* Use flexbox to align cards side by side */
   flex-direction: row; /* Arrange cards horizontally */
@@ -17,12 +13,10 @@
 
 .cards-wrapper > .cards.block > ul > li {
   background-color: var(--background-color); /* White bg for cards */
-
-  /* box-shadow: 0 2px 6px rgb(0 0 0 / 10%); Add subtle shadow for elevation */
   overflow: hidden; /* Prevent content overflow */
-  border-radius: 24px; /* Add rounded corners */
+  border-radius: 64px; /* Add rounded corners */
   padding: 64px; /* Increase internal padding to make cards taller */
-  margin: 0 10px; /* Reset margin */
+  margin: 0 10px; /* Set margins */
   box-sizing: border-box; /* Include padding and border in element's total width */
   flex: 1; /* Ensure equal card width */
   display: flex; /* Use flexbox for internal card layout */
@@ -84,14 +78,15 @@
   margin: 0 auto; /* Center the block horizontally */
   padding: 0; /* section padding */
   justify-content: center; /* Align cards horizontally */
+  row-gap: 16px; /* Add spacing between rows */
 }
 
 .cards-wrapper > .cards.salmon.block > ul > li {
   background-color: #fdefe7;
+  border-radius: 24px;
   display: flex; /* Use flexbox to align cards side by side */
   flex: 1 0 26%; /* Allow cards to grow and shrink */
-  margin: 10px; /* Center the block horizontally */
-  padding: 64px 36px; /* section padding */
+  padding: 40px 36px; /* section padding */
 }
 
 .cards-wrapper > .cards.block > ul > li .cards-card-body ul {
@@ -105,10 +100,6 @@
   color: var( --text-color); /* Use gray color for body text */
   margin-bottom: 8px; /* Add more spacing between list items */
   font-weight: 400; /* Increase font weight for better readability */
-}
-
-#biomarkers-in-ovarian-cancer {
-  margin-bottom: 12px; /* Tighten spacing */
 }
 
 .cards-wrapper > .cards.salmon.block > ul > li > .cards-card-body {
@@ -127,10 +118,6 @@
 .cards-wrapper > .cards.salmon.block > ul > li > .cards-card-body > p > strong {
   color: #1b252c;
   margin-bottom: 6px;
-}
-
-.hero-container + .cards-container > .cards-wrapper > .cards.block > ul > li {
-  border-radius: 64px; /* Special radius for home page cards immediately following hero */
 }
 
 @media (width <= 1024px) {
