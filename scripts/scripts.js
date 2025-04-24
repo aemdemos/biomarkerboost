@@ -87,6 +87,15 @@ function buildAutoBlocks(main) {
     console.error('Auto Blocking failed', error);
   }
 }
+//Create a new function to prepend this html to the main element: 
+//    <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
+function prependSkipToMainLink(main) {
+  const skipToMainLink = document.createElement('a');
+  skipToMainLink.href = '#main';
+  skipToMainLink.classList.add('skip-to-main-content-link');
+  skipToMainLink.innerText = 'Skip to main content';
+  main.prepend(skipToMainLink);
+}
 
 /**
  * Decorates the main element.
@@ -95,12 +104,14 @@ function buildAutoBlocks(main) {
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
   // hopefully forward compatible button decoration
+  
   decorateButtons(main);
   decorateIcons(main);
   decorateLinkedPictures(main);
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  
 }
 
 /**
@@ -115,6 +126,7 @@ async function loadEager(doc) {
     decorateMain(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
+    prependSkipToMainLink(main);
   }
 
   try {

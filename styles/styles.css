@@ -134,6 +134,16 @@ header .header[data-block-status="loaded"], footer .footer[data-block-status="lo
   visibility: visible;
 }
 
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;

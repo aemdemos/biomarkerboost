@@ -491,6 +491,8 @@ function decorateLinkedPictures(block) {
  * @param {Element} main The container element
  */
 function decorateSections(main) {
+  //add id of 'main' to main element
+  main.id = 'main';
   main.querySelectorAll(':scope > div:not([data-section-status])').forEach((section) => {
     const wrappers = [];
     let defaultContent = false;
