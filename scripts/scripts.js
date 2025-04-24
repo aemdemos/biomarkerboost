@@ -96,7 +96,7 @@ function prependSkipToMainLink(main) {
   skipToMainLink.href = '#main';
   skipToMainLink.classList.add('skip-to-main-content-link');
   skipToMainLink.innerText = 'Skip to main content';
-  main.prepend(skipToMainLink);
+  main.insertAdjacentElement('beforebegin', skipToMainLink);
 }
 
 /**
@@ -124,9 +124,10 @@ async function loadEager(doc) {
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
+    prependSkipToMainLink(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
-    prependSkipToMainLink(main);
+    
   }
 
   try {
