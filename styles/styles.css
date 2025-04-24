@@ -185,7 +185,8 @@ h6 {
 sup {
   font-size: 12px;
   line-height: 18px;
-  vertical-align: super;
+  vertical-align: unset;
+  display: block;
 }
 
 p, dl, ol, ul, pre, blockquote {
