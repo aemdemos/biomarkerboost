@@ -106,6 +106,17 @@ function buildAutoBlocks(main) {
 }
 
 /**
+ * Create a new function to prepend this html to the main element
+ */
+function prependSkipToMainLink(main) {
+  const skipToMainLink = document.createElement('a');
+  skipToMainLink.href = '#main';
+  skipToMainLink.classList.add('skip-to-main-content-link');
+  skipToMainLink.innerText = 'Skip to main content';
+  main.insertAdjacentElement('beforebegin', skipToMainLink);
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -131,6 +142,7 @@ async function loadEager(doc) {
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
+    prependSkipToMainLink(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }
