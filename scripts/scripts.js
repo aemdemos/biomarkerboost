@@ -11,6 +11,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  createOptimizedPicture,
 } from './aem.js';
 
 /**
@@ -59,17 +60,60 @@ async function loadFonts() {
   }
 }
 
+function decorateSectionBackgrounds(main) {
+  main.querySelectorAll('.section[data-background]').forEach((section) => {
+    const { background } = section.dataset;
+    // if background is a picture, create an optimized picture
+    if (background.includes('media_')) { // if background is an embedded image
+      const backgroundPicture = createOptimizedPicture(background);
+      backgroundPicture.classList.add('section-background-image');
+      section.prepend(backgroundPicture);
+    } else if (background.startsWith('#')) { // if background is a hex color
+      section.style.backgroundColor = background;
+    } else if (background.includes('deg')) { // if background is a gradient
+      section.setAttribute('style', `background-image: linear-gradient(${background});`);
+    }
+  });
+}
+
+function buildPageDivider(main) {
+  const allPageDivider = main.querySelectorAll('code');
+
+  allPageDivider.forEach((el) => {
+    const alt = el.innerText.trim();
+    const lower = alt.toLowerCase();
+    if (lower.startsWith('divider')) {
+      if (lower === 'divider' || lower.includes('element')) {
+        el.innerText = '';
+        el.classList.add('divider');
+      }
+    }
+  });
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
-function buildAutoBlocks() {
+function buildAutoBlocks(main) {
   try {
     // TODO: add auto block, if needed
+    buildPageDivider(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
   }
+}
+
+/**
+ * Create a new function to prepend this html to the main element
+ */
+function prependSkipToMainLink(main) {
+  const skipToMainLink = document.createElement('a');
+  skipToMainLink.href = '#main';
+  skipToMainLink.classList.add('skip-to-main-content-link');
+  skipToMainLink.innerText = 'Skip to main content';
+  main.insertAdjacentElement('beforebegin', skipToMainLink);
 }
 
 /**
@@ -85,6 +129,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateSectionBackgrounds(main);
 }
 
 /**
@@ -97,6 +142,7 @@ async function loadEager(doc) {
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
+    prependSkipToMainLink(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }
