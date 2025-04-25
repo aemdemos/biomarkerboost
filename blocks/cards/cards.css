@@ -48,6 +48,7 @@
 
 .cards-wrapper + .default-content-wrapper > p {
   font-size: 12px; /* Adjust font size for footnote text following cards */
+  text-align: left; /* fix footnote alignment */
 }
 
 .cards-wrapper > .cards.block > ul > li .cards-card-body p {
