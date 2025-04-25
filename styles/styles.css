@@ -23,6 +23,8 @@
   --c-soft-black: #1b252c;
   --c-teal: #88d7d4;
   --c-deep-teal: #00727f;
+  --c-light-salmon: #fdefe7;
+  --c-light-pink: #efeff7;
   --body-font-family: "Roboto", "Roboto Fallback", "sans-serif";
   --heading-font-family: "Roboto", "Roboto Fallback", "sans-serif";
   --heading-condensed-font-family: "Roboto Condensed", "Roboto Fallback", "sans-serif";
@@ -155,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: var(--heading-font-size-xxl);
-  color: var(--c-teal);
+  color: var(--c-navy);
 }
 
 h2 {
@@ -283,7 +285,7 @@ a.button.secondary:hover, a.button.secondary:focus, button.secondary:hover, butt
 
 
 main img {
-  max-width: 100%;
+  max-height: 100%;
   width: auto;
   height: auto;
 }
@@ -310,27 +312,79 @@ main img {
   margin-left: 8px;
   height: 13px;
   width: 13px;
-  
 }
 
 /* sections */
+
 main>.section {
   margin: 40px 0;
 }
 
-main>.section>div {
-  max-width: 1200px;
-  margin: auto;
+main > div > div {
+  position: relative;
+  display: block;
+  max-width: 1120px;
   padding: 0 24px;
+  margin: 0 auto;
 }
 
-main>.section:first-of-type {
+main > .section:first-of-type {
   margin-top: 0;
+  padding-top: 0;
+}
+
+.section[data-background] {
+  position: relative;
+  margin: 0;
+  padding: 64px 0;
+}
+
+.section[data-theme] {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.section[data-background] picture.section-background-image {
+  position: absolute;
+  inset: 0;
+}
+
+.section[data-background] picture.section-background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.section[data-theme='deep-teal'] {
+  background-size: 100% 100%;
+  background-position: 0 0,0 0;
+  background-image: linear-gradient(6deg, #004A71 0%, #237C9A 49%, #35AEB6 100%);
+  color: white;
+
+  & h1 {
+    color: var(--c-teal);
+  }
+}
+
+@media (width >= 768px) {
+  .section[data-theme='deep-teal'] {
+    background-size: 2880px 100%;
+    background-position: 0 0,0 0;
+    background-image: radial-gradient(78% 91% at 51% 96%, #004A71 21%, #0FF0 75%, #0FF0 100%),
+    linear-gradient(90deg, #6E90B6 0%, #3283A1 46%, #2FAAB2 100%);
+  }
 }
 
 @media (width>=900px) {
-  main>.section>div {
-    padding: 0 32px;
+  main > div >div {
+    padding: 0 160px;
+  }
+}
+
+@media (width>=1200px) {
+  main > div >div {
+    padding: 64px clamp(24px, 11%, 160px);
   }
 }
 
