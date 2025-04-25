@@ -147,7 +147,7 @@ header .header[data-block-status="loaded"], footer .footer[data-block-status="lo
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0.8em;
+  margin-top: 0; 
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
   font-weight: 600;
@@ -190,6 +190,13 @@ h5 {
 h6 {
   font-size: var(--heading-font-size-xs);
   color: var(--c-citrus);
+}
+
+sup {
+  font-size: 12px;
+  line-height: 18px;
+  vertical-align: unset;
+  display: block;
 }
 
 p, dl, ol, ul, pre, blockquote {
@@ -376,15 +383,9 @@ main > .section:first-of-type {
   }
 }
 
-@media (width>=900px) {
-  main > div >div {
-    padding: 0 160px;
-  }
-}
-
 @media (width>=1200px) {
   main > div >div {
-    padding: 64px clamp(24px, 11%, 160px);
+    padding: 0 160px;
   }
 }
 

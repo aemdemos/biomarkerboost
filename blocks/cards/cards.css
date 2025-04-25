@@ -1,9 +1,5 @@
-.cards .cards-card-body>h2, .cards .cards-card-body>h3, .cards .cards-card-body>h4 {
+.cards .cards-card-body > h2, .cards .cards-card-body > h3, .cards .cards-card-body > h4 {
   margin-bottom: 18px; /* Add spacing below headings */
-}
-
-.cards-wrapper{
-  max-width: 1120px; /* Set max width for the card wrapper */
 }
 
 .cards-wrapper > .cards.block > ul {
@@ -11,18 +7,15 @@
   flex-direction: row; /* Arrange cards horizontally */
   list-style: none; /* Remove bullet points */
   margin: 0 auto; /* Center the block horizontally */
-  padding: 64px 0; /* section padding */
   justify-content: center; /* Align cards horizontally */
 }
 
 .cards-wrapper > .cards.block > ul > li {
   background-color: var(--background-color); /* White bg for cards */
-
-  /* box-shadow: 0 2px 6px rgb(0 0 0 / 10%); Add subtle shadow for elevation */
   overflow: hidden; /* Prevent content overflow */
-  border-radius: 24px; /* Add rounded corners */
+  border-radius: 64px; /* Add rounded corners */
   padding: 64px; /* Increase internal padding to make cards taller */
-  margin: 0 10px; /* Reset margin */
+  margin: 0 10px; /* Set margins */
   box-sizing: border-box; /* Include padding and border in element's total width */
   flex: 1; /* Ensure equal card width */
   display: flex; /* Use flexbox for internal card layout */
@@ -53,6 +46,10 @@
   width: 100%; /* Ensure the body section occupies full width */
 }
 
+.cards-wrapper + .default-content-wrapper > p {
+  font-size: 12px; /* Adjust font size for footnote text following cards */
+}
+
 .cards-wrapper > .cards.block > ul > li .cards-card-body p {
   margin-bottom: 24px; /* Add spacing below the title */
   margin-top: 0; /* Reset top margin */
@@ -73,6 +70,24 @@
   color: var(--c-citrus); /* Use orange citrus color for title text */
 }
 
+.cards-wrapper > .cards.salmon.block > ul {
+  display: flex; /* Use flexbox to align cards side by side */
+  flex-flow: row wrap; /* Arrange cards horizontally */ /* Allow cards to wrap to the next line */
+  list-style: none; /* Remove bullet points */
+  margin: 0 auto; /* Center the block horizontally */
+  padding: 0; /* section padding */
+  justify-content: center; /* Align cards horizontally */
+  row-gap: 16px; /* Add spacing between rows */
+}
+
+.cards-wrapper > .cards.salmon.block > ul > li {
+  background-color: #fdefe7;
+  border-radius: 24px;
+  display: flex; /* Use flexbox to align cards side by side */
+  flex: 1 0 26%; /* Allow cards to grow and shrink */
+  padding: 40px 36px; /* section padding */
+}
+
 .cards-wrapper > .cards.block > ul > li .cards-card-body ul {
   list-style: none; /* Remove bullet points */
   padding: 0; /* Reset padding */
@@ -86,8 +101,22 @@
   font-weight: 400; /* Increase font weight for better readability */
 }
 
-.hero-container + .cards-container > .cards-wrapper > .cards.block > ul > li {
-  border-radius: 64px; /* Special radius for home page cards immediately following hero */
+.cards-wrapper > .cards.salmon.block > ul > li > .cards-card-body {
+  background-color: unset; /* Reset background color */
+  padding-bottom: 0; /* Reset bottom padding */
+}
+
+.cards-wrapper > .cards.salmon.block > ul > li > .cards-card-body > p {
+  margin-bottom: 6px; /* Add spacing below the title */
+}
+
+.cards-wrapper > .cards.salmon.block > ul > li > .cards-card-body > h3 {
+  margin-bottom: 0; /* Reset bottom margin */
+}
+
+.cards-wrapper > .cards.salmon.block > ul > li > .cards-card-body > p > strong {
+  color: #1b252c;
+  margin-bottom: 6px;
 }
 
 @media (width <= 1024px) {
@@ -105,7 +134,16 @@
     margin-bottom: 16px; /* Adjust spacing below image for smaller screens */
   }
 
-  .cards-wrapper > .cards.block > ul > li .cards-card-body {
-    align-items: center; /* Center-align text for smaller screens */
+  .cards-wrapper > .cards.salmon.block > ul > li .cards-card-body {
+    align-items: unset; /* Left-align salmon biomarker cells text */
+  }
+
+  .cards-wrapper > .cards.salmon.block > ul {
+    display: flex; /* Use flexbox to align cards side by side */
+    flex-flow: column; /* Arrange cards horizontally, no wrap for mobile sizes */
+    list-style: none; /* Remove bullet points */
+    margin: 0 auto; /* Center the block horizontally */
+    padding: 0; /* section padding */
+    justify-content: center; /* Align cards horizontally */
   }
 }
