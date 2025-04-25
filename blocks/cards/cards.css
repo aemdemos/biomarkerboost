@@ -135,10 +135,6 @@
     margin-bottom: 16px; /* Adjust spacing below image for smaller screens */
   }
 
-  .cards-wrapper > .cards.block > ul > li .cards-card-body {
-    align-items: center; /* Center-align text for smaller screens */
-  }
-
   .cards-wrapper > .cards.salmon.block > ul > li .cards-card-body {
     align-items: unset; /* Left-align salmon biomarker cells text */
   }
