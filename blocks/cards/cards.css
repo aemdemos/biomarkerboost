@@ -7,7 +7,6 @@
   flex-direction: row; /* Arrange cards horizontally */
   list-style: none; /* Remove bullet points */
   margin: 0 auto; /* Center the block horizontally */
-  padding: 64px 0; /* section padding */
   justify-content: center; /* Align cards horizontally */
 }
 
