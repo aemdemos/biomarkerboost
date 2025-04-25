@@ -1,20 +1,79 @@
-footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
-}
+ /* /blocks/footer/footer.css */
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
-}
+ footer {
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
 
-footer .footer p {
-  margin: 0;
-}
+  .block.footer {
+    border-top: solid 1px var(--dark-color);
+  
+    a {
+      all: unset;
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        color: orange;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: 8px 0;
+      justify-content: left;
+    }
+
+    & > div {
+      background-color: #e4eaee;
+      margin: 0 auto;
+      width: 100%;
+      }
+
+      .columns > div > div:last-child {
+        img {
+          width: 25px;
+          height: 14px;
+          padding-left: 5px;
+        }
+     }
+     
+      .columns > div > div:first-child {
+        img {
+          margin: 0 0 40px;
+        }
+      }
+
+      & > div > div:first-child {
+        background-color: #004b6e;
+        padding: 64px 24px;
+      }   
+      /* stylelint-disable-next-line rule-empty-line-before */
+      & > div > div:nth-child(2) {
+        padding: 24px;
+      }   
+   }
+
+   .default-content-wrapper  {
+      color: #004b6e;
   }
 }
+
+@media (width >= 900px) { 
+  .columns > div > div:first-child {
+      margin: 0 auto;
+      justify-items: center;
+  }
+
+  .default-content-wrapper  {
+    text-align: center;
+}
+}
+
+ 
