@@ -66,12 +66,12 @@
 }
 
 @media (width >= 900px) { 
-  .columns > div > div:first-child {
+  .footer .columns > div > div:first-child {
       margin: 0 auto;
       justify-items: center;
   }
 
-  .default-content-wrapper  {
+  .footer .default-content-wrapper  {
     text-align: center;
 }
 }
