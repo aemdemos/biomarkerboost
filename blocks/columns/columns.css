@@ -3,10 +3,6 @@
   flex-direction: column;
 }
 
-.columns img {
-  width: 100%;
-}
-
 .columns > div > div {
   order: 1;
 }
