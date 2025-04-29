@@ -2,7 +2,6 @@
 .accordion-wrapper {
   display: flex; /* Flex container for outer wrapper */
   flex-direction: column; /* Stack elements vertically */
-  max-width: 800px; /* Constrain max width */
   margin: 0 auto; /* Center horizontally */
   padding: 2rem; /* Add padding around the block */
   background-color: #fff; /* Set white background */
@@ -38,18 +37,19 @@
 
 .accordion-wrapper > .accordion.block > details summary::after {
   content: '';
-  position: relative;
+  position: absolute;
   width: 13px; /* Increase caret size */
   height: 13px; /* Increase caret size */
   border: 2px solid #f60; /* Orange caret color */
   border-width: 2px 2px 0 0; 
-  transform: rotate(135deg); /* Create caret shape */
+  transform: rotate(-45deg); /* Create caret shape */
   transition: transform 0.2s; /* Smooth rotation */
   margin-right: 2px;
+  right: 30px;
 }
 
 .accordion-wrapper > .accordion.block > details[open] summary::after {
-  transform: rotate(-45deg); /* Rotate caret when open */
+  transform: rotate(135deg); /* Rotate caret when open */
 }
 
 .accordion-wrapper > .accordion.block > details .accordion-item-body {
@@ -61,10 +61,11 @@
 .default-content-wrapper h2 {
   font-size: 30px; /* Large font size for title */
   font-weight: bold; /* Bold text for emphasis */
-  color: #ef5f17; /* Navy blue text color */
+  color: var(--c-citrus); /* Navy blue text color */
   margin-bottom: 1rem; /* Add spacing below title */
 }
 
 .accordion-item-label h3 {
   color: var(--c-navy);
+  margin-right: 32px;
 }
