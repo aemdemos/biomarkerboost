@@ -91,6 +91,16 @@ function buildPageDivider(main) {
   });
 }
 
+function decorateEyebrows(main) {
+  main.querySelectorAll('h1, h2, h3').forEach((h) => {
+    const prev = h.previousElementSibling;
+    if (prev && prev.tagName === 'P' && !prev.querySelector('picture')) {
+      prev.classList.add('eyebrow');
+      h.dataset.eyebrow = prev.textContent;
+    }
+  });
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -130,6 +140,7 @@ export function decorateMain(main) {
   decorateSections(main);
   decorateBlocks(main);
   decorateSectionBackgrounds(main);
+  decorateEyebrows(main);
 }
 
 /**
