@@ -2,7 +2,6 @@
 .accordion-wrapper {
   display: flex; /* Flex container for outer wrapper */
   flex-direction: column; /* Stack elements vertically */
-  max-width: 800px; /* Constrain max width */
   margin: 0 auto; /* Center horizontally */
   padding: 2rem; /* Add padding around the block */
   background-color: #fff; /* Set white background */
@@ -16,7 +15,6 @@
 
 .accordion-wrapper > .accordion.block > details {
   border: none; /* Remove full border */
-  border-bottom: 1px solid #ccc; /* Add thin horizontal separator */
   padding-bottom: 1rem; /* Add spacing below each accordion item */
 }
 
@@ -27,6 +25,7 @@
   align-items: center; /* Center text and caret vertically */
   padding: 0; /* Remove default padding */
   cursor: pointer; /* Add interactivity */
+  border-bottom: 1px solid #B6B7DA; /* Add bottom border for separation */
 }
 
 .accordion-wrapper > .accordion.block > details summary p {
@@ -38,47 +37,35 @@
 
 .accordion-wrapper > .accordion.block > details summary::after {
   content: '';
-  position: relative;
-  width: 8px; /* Increase caret size */
-  height: 8px; /* Increase caret size */
+  position: absolute;
+  width: 13px; /* Increase caret size */
+  height: 13px; /* Increase caret size */
   border: 2px solid #f60; /* Orange caret color */
   border-width: 2px 2px 0 0; 
-  transform: rotate(135deg); /* Create caret shape */
+  transform: rotate(-45deg); /* Create caret shape */
   transition: transform 0.2s; /* Smooth rotation */
+  margin-right: 2px;
+  right: 30px;
 }
 
 .accordion-wrapper > .accordion.block > details[open] summary::after {
-  transform: rotate(-45deg); /* Rotate caret when open */
+  transform: rotate(135deg); /* Rotate caret when open */
 }
 
 .accordion-wrapper > .accordion.block > details .accordion-item-body {
-  padding-top: 1rem; /* Add spacing above accordion body content */
   font-size: 1rem; /* Regular font size for body text */
-  color: #666; /* Gray color for body content */
+  color: var(--text-color); /* Gray-ish blue color for body content */
   background-color: transparent; /* Remove background color */
 }
 
-/* Title and Subtitle Fix */
-.accordion-wrapper::before {
-  content: 'Frequently asked questions about biomarker testing';
-  display: block;
-  font-size: 2rem; /* Large font size for title */
-  font-weight: bold; /* Bold text for title */
-  color: #f60; /* Orange color for title */
-  margin-bottom: 0.5rem; /* Reduce spacing below title */
+.default-content-wrapper h2 {
+  font-size: 30px; /* Large font size for title */
+  font-weight: bold; /* Bold text for emphasis */
+  color: var(--c-citrus); /* Navy blue text color */
+  margin-bottom: 1rem; /* Add spacing below title */
 }
 
-.accordion-wrapper::after {
-  content: 'Want to know more about biomarker testing? Here are answers to common questions:';
-  display: block;
-  font-size: 1rem; /* Regular font size for subtitle */
-  color: #666; /* Gray color for subtitle */
-  line-height: 1.5; /* Improve subtitle readability */
-  font-weight: normal; /* Ensure regular weight for non-bold text */
-  margin-top: 0.5rem; /* Position subtitle closer to the title */
-  margin-bottom: 2rem; /* Ensure spacing below subtitle */
-}
-
-.accordion-wrapper::after strong {
-  font-weight: bold; /* Bold emphasis for certain parts of subtitle */
+.accordion-item-label h3 {
+  color: var(--c-navy);
+  margin-right: 32px;
 }
