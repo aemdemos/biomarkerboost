@@ -116,6 +116,25 @@ function prependSkipToMainLink(main) {
   main.insertAdjacentElement('beforebegin', skipToMainLink);
 }
 
+/**Function to change the color of all <del> elements contained in any heading element, and has the color var(--c-navy) to var(--c-citrus) or viceversa, and remove any other text decoration 
+  * @param {Element} main The container element
+  */
+function changeStrikethroughTextColor(main) {
+  const headings = main.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  headings.forEach((heading) => {
+    const strikethroughs = heading.querySelectorAll('del');
+    strikethroughs.forEach((strikethrough) => {
+      strikethrough.style.textDecoration = 'none';
+      const computedColor = window.getComputedStyle(strikethrough).color;
+      if (computedColor === 'rgb(0, 75, 110)') { // var(--c-navy) in RGB
+        strikethrough.style.color = 'var(--c-citrus)';
+      } else if (computedColor === 'rgb(239, 95, 23)') { // var(--c-citrus) in RGB
+        strikethrough.style.color = 'var(--c-navy)';
+      }
+    });
+  });
+}
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -145,6 +164,7 @@ async function loadEager(doc) {
     prependSkipToMainLink(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
+    changeStrikethroughTextColor(main);
   }
 
   try {
