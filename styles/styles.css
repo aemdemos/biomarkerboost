@@ -160,6 +160,11 @@ h1 {
   color: var(--c-navy);
 }
 
+h1 > del {
+  color: var(--c-citrus);
+  text-decoration: none;
+}
+
 h2 {
   font-size: var(--heading-font-size-xl);
   color: var(--c-navy);
@@ -168,10 +173,20 @@ h2 {
   margin-bottom: 24px;
 }
 
+h2 > del {
+  color: var(--c-citrus);
+  text-decoration: none;
+}
+
 h3 {
   font-size: var(--heading-font-size-l);
   color: var(--c-citrus);
   line-height: 36px;
+}
+
+h3 > del {
+  color: var(--c-navy);
+  text-decoration: none;
 }
 
 h4 {
@@ -182,14 +197,29 @@ h4 {
   margin-bottom: 12px;
 }
 
+h4 > del {
+  color: var(--c-navy);
+  text-decoration: none;
+}
+
 h5 {
   font-size: var(--heading-font-size-s);
   color: var(--c-navy);
 }
 
+h5 > del {
+  color: var(--c-citris);
+  text-decoration: none;
+}
+
 h6 {
   font-size: var(--heading-font-size-xs);
   color: var(--c-citrus);
+}
+
+h6 > del {
+  color: var(--c-navy);
+  text-decoration: none;
 }
 
 sup {

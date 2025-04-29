@@ -65,5 +65,6 @@
 }
 
 .accordion-item-label h3 {
+  color: var(--c-navy);
   margin-right: 32px;
 }
