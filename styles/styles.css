@@ -351,6 +351,37 @@ main img {
   width: 13px;
 }
 
+/* Alignment of authored block cells */
+.center, [data-align="center"] {
+  text-align: center;
+    background-position-x: center;
+}
+
+[data-valign="bottom"] {
+    align-content: end;
+    background-position-y: bottom;
+}
+
+[data-valign="middle"] {
+    align-content: center;
+    background-position-y: center;
+}
+
+[data-valign="top"] {
+    align-content: start;
+    background-position-y: top;
+}
+
+[data-align="right"] {
+    text-align: right;
+    background-position-x: right;
+}
+
+[data-align="left"], [data-align="justify"] {
+    text-align: left;
+    background-position-x: left;
+}
+
 /* sections */
 
 main>.section {
