@@ -61,7 +61,6 @@
 .default-content-wrapper h2 {
   font-size: 30px; /* Large font size for title */
   font-weight: bold; /* Bold text for emphasis */
-  color: var(--c-citrus); /* Navy blue text color */
   margin-bottom: 1rem; /* Add spacing below title */
 }
 
