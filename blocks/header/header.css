@@ -1,7 +1,8 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background: linear-gradient(90deg, #1b252c, #004b6e);
   width: 100%;
+  height: auto;
   z-index: 2;
   position: fixed;
 }
@@ -51,7 +52,11 @@ header nav p {
 }
 
 header nav a:any-link {
-  color: currentcolor;
+  color: var(--c-teal);
+  font-family: Roboto,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
 }
 
 /* hamburger */
@@ -145,14 +150,26 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
   height: auto;
+  width: 340px;
+  margin-bottom: -3px;
+  margin-left: -96px;
+  margin-top: 11px;
+  transition: width 0.45s ease;
+}
+
+transition {
+  width: 340px;
+}
+
+scrolling {
+  width: 240px;
 }
 
 /* sections */
 header nav .nav-sections {
   grid-area: sections;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   display: none;
   visibility: hidden;
 }
@@ -220,13 +237,16 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap: 36px;
     margin: 0;
+    height: 62px;
+    margin-right: 49px;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
+    align-content: center;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
