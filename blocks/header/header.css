@@ -158,14 +158,6 @@ header nav .nav-brand img {
   transition: width 0.45s ease;
 }
 
-transition {
-  width: 340px;
-}
-
-scrolling {
-  width: 240px;
-}
-
 /* sections */
 header nav .nav-sections {
   grid-area: sections;

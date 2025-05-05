@@ -23,7 +23,6 @@ function closeOnEscape(e) {
 
 // Select the image inside the header
 
-
 // Add scroll event listener
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
