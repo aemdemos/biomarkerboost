@@ -30,7 +30,6 @@ header nav[aria-expanded='true'] {
   overflow: visible;
 }
 
-
 header nav p {
   margin: 0;
   line-height: 1;
@@ -63,7 +62,6 @@ header nav .nav-hamburger button {
   width: 34px;
   height: 22px;
   background-image: url('/icons/hamburger-btn.svg');
-  /*remove default button styles*/
   border: none;
   padding: 0;
   margin-right: 12px;
@@ -153,12 +151,13 @@ header nav[aria-expanded='true'] .nav-tools {
   header nav a:any-link {
     color: var(--c-teal);
   }
+  
   header nav[aria-expanded='true'] .nav-tools {
   display: flex;
   margin-right: 50px;
   margin-top: 4px;
   background-color: transparent;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   }
  
   header nav .nav-hamburger {

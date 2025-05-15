@@ -32,11 +32,11 @@ window.addEventListener('scroll', () => {
   if (isSmallScreen) {
     headerImage.style.width = '170px';
   } else if (scrollPosition > 20) { // Shrink after scrolling 50px
-      console.log('Shrinking image');
-      headerImage.style.width = '240px';
-    } else { // Restore when near the top
-      headerImage.style.width = '340px';
-    }
+    console.log('Shrinking image');
+    headerImage.style.width = '240px';
+  } else { // Restore when near the top
+    headerImage.style.width = '340px';
+  }
 });
 function closeOnFocusLost(e) {
   const nav = e.currentTarget;
@@ -45,10 +45,10 @@ function closeOnFocusLost(e) {
     const navSectionExpanded = navSections.querySelector('[aria-expanded="true"]');
     if (navSectionExpanded && isDesktop.matches) {
       // eslint-disable-next-line no-use-before-define
-      //toggleAllNavSections(navSections, false);
+      toggleAllNavSections(navSections, false);
     } else if (!isDesktop.matches) {
       // eslint-disable-next-line no-use-before-define
-      //toggleMenu(nav, navSections, false);
+      toggleMenu(nav, navSections, false);
     }
   }
 }
@@ -88,7 +88,7 @@ function toggleAllNavSections(sections, expanded = false) {
 function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
-  //document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
+  document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
