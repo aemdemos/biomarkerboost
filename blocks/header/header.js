@@ -29,8 +29,8 @@ window.addEventListener('scroll', () => {
   const headerImage = document.querySelector('header nav .nav-brand img');
   const isSmallScreen = window.innerWidth <= 900;
   // Adjust image width based on scroll position
-    if (!isSmallScreen) {
-      if (scrollPosition > 20) { // Shrink after scrolling 50px
+  if (!isSmallScreen) {
+    if (scrollPosition > 20) { // Shrink after scrolling 50px
       headerImage.style.width = '240px';
     } else { // Restore when near the top
       headerImage.style.width = '340px';
@@ -45,8 +45,8 @@ window.addEventListener('resize', () => {
   const headerImage = document.querySelector('header nav .nav-brand img');
   const isSmallScreen = window.innerWidth <= 900;
   // Adjust image width based on scroll position
-    if (!isSmallScreen) {
-      if (scrollPosition > 20) { // Shrink after scrolling 50px
+  if (!isSmallScreen) {
+    if (scrollPosition > 20) { // Shrink after scrolling 50px
       headerImage.style.width = '240px';
     } else { // Restore when near the top
       headerImage.style.width = '340px';
