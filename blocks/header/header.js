@@ -26,18 +26,36 @@ function closeOnEscape(e) {
 // Add scroll event listener
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
-  const headerImage = document.querySelector('header nav[aria-expanded=\'true\'] .nav-brand img');
+  const headerImage = document.querySelector('header nav .nav-brand img');
   const isSmallScreen = window.innerWidth <= 900;
   // Adjust image width based on scroll position
-  if (isSmallScreen) {
+    if (!isSmallScreen) {
+      if (scrollPosition > 20) { // Shrink after scrolling 50px
+      headerImage.style.width = '240px';
+    } else { // Restore when near the top
+      headerImage.style.width = '340px';
+    }
+  } else {
     headerImage.style.width = '170px';
-  } else if (scrollPosition > 20) { // Shrink after scrolling 50px
-    console.log('Shrinking image');
-    headerImage.style.width = '240px';
-  } else { // Restore when near the top
-    headerImage.style.width = '340px';
   }
 });
+
+window.addEventListener('resize', () => {
+  const scrollPosition = window.scrollY;
+  const headerImage = document.querySelector('header nav .nav-brand img');
+  const isSmallScreen = window.innerWidth <= 900;
+  // Adjust image width based on scroll position
+    if (!isSmallScreen) {
+      if (scrollPosition > 20) { // Shrink after scrolling 50px
+      headerImage.style.width = '240px';
+    } else { // Restore when near the top
+      headerImage.style.width = '340px';
+    }
+  } else {
+    headerImage.style.width = '170px';
+  }
+});
+
 function closeOnFocusLost(e) {
   const nav = e.currentTarget;
   if (!nav.contains(e.relatedTarget)) {
