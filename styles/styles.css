@@ -332,6 +332,7 @@ main img {
   width: 100%;
   height: 1px;
   background-color: #b6b7da;
+  margin-bottom: 48px
 }
 
 .icon {
@@ -433,6 +434,33 @@ main > .section:first-of-type {
   & h1 {
     color: var(--c-teal);
   }
+}
+
+div.section.columns-container .eyebrow {
+  color: var(--c-citrus);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+div.section.columns-container img {
+  width: 100px;
+}
+
+div.section.columns-container p {
+  color: var(--c-navy);
+}
+
+div.section.columns-container .columns-img-col {
+  flex: 0;
+}
+
+div.section.columns-container .eyebrow{
+  margin-top: 0;
+}
+
+columns block columns-1-cols {
+  margin-top: 24px; 
 }
 
 @media (width >= 768px) {
