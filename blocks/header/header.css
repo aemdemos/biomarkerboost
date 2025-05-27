@@ -90,7 +90,7 @@ header .nav-brand {
 header nav .nav-brand img {
   height: auto;
   width: 170px;
-  margin-bottom: -3px;
+  margin-bottom: -5px;
   margin-top: 7px;
   transition: width 0.45s ease;
 }
@@ -268,7 +268,7 @@ header nav[aria-expanded='true'] .nav-tools {
   header nav .nav-brand img {
   height: auto;
   width: 340px;
-  margin-bottom: -3px;
+  margin-bottom: -4px;
   margin-left: -96px;
   margin-top: 11px;
   transition: width 0.45s ease;
