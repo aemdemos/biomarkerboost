@@ -143,7 +143,7 @@
   color: var(--c-navy);
   font-size: 30px;
   line-height: 36px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   unicode-bidi: isolate;
 }
@@ -172,6 +172,7 @@
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+  margin-bottom: 18px;
 }
 
 #see-why-biomarkers-matter-in-ovarian-cancer {
@@ -182,6 +183,7 @@
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+  margin-bottom: 18px;
 }
 
 #know-what-to-expect-with-biomarker-testing {
@@ -192,6 +194,7 @@
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+  margin-bottom: 18px;
 }
 
 @media (width >= 960px) {
@@ -205,6 +208,10 @@
 
   .hero.block > div {
     height: 500px;
+  }
+
+  .hero.hero.block > div > div:nth-child(1){
+  margin-bottom: unset;
   }
   
   .hero-container > .hero-wrapper > .hero > div {
@@ -287,7 +294,8 @@
   #educate-yourself-with-the {
     font-size: 48px;
     line-height: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
+    margin-left: -2px;
     color: white;
   }
 
