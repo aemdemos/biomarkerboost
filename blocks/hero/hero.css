@@ -65,7 +65,7 @@
 }
 
 #main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(1) > h5 {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -75,7 +75,7 @@
 }
 
 #main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(1) > h6 {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
@@ -304,7 +304,7 @@
   }
 
   #main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(1) > h5 {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -314,7 +314,7 @@
   }
 
   #main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(1) > h6 {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 12px;
