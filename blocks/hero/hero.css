@@ -65,7 +65,7 @@
 }
 
 #main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(1) > h5 {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -75,7 +75,7 @@
 }
 
 #main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(1) > h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
@@ -143,7 +143,7 @@
   color: var(--c-navy);
   font-size: 30px;
   line-height: 36px;
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: bold;
   unicode-bidi: isolate;
 }
@@ -210,10 +210,6 @@
     height: 500px;
   }
 
-  .hero.hero.block > div > div:nth-child(1){
-  margin-bottom: unset;
-  }
-  
   .hero-container > .hero-wrapper > .hero > div {
     display: flex; /* Enable flexbox for second-level layout */
     flex-direction: row; /* Ensure second-level elements are side by side */
@@ -227,6 +223,10 @@
   .hero-container > .hero-wrapper > .hero > div > div {
     flex: 1; /* Allow the image container to take up half the space */
     max-width: 50%; /* Restrict image container width */
+  }
+
+  .hero.hero.block > div > div:nth-child(1){
+  margin-bottom: unset;
   }
 
   #main > div.section.hero-container > div > div > div > div:nth-child(2) > p:nth-child(2) {
@@ -312,7 +312,7 @@
   }
 
   #main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(1) > h5 {
-    font-family: "Roboto", sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -322,7 +322,7 @@
   }
 
   #main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(1) > h6 {
-    font-family: "Roboto", sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 12px;
