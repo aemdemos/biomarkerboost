@@ -25,4 +25,8 @@
     flex: 1;
     order: unset;
   }
+  #main > div.section.columns-container > div:nth-child(4) > div > div > div.columns-img-col {
+    flex: 0;
+    order: unset;
+  }
 }
