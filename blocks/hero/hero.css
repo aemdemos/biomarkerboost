@@ -219,7 +219,7 @@
   .hero.home.block > div {
     height: 700px;
   }
-  
+
   .hero-container > .hero-wrapper > .hero > div > div {
     flex: 1; /* Allow the image container to take up half the space */
     max-width: 50%; /* Restrict image container width */
@@ -265,7 +265,6 @@
     object-fit: cover;
     object-position: center;
     z-index: 1;
-    overflow: visible;
     left: unset;
     transform: unset;
   }
@@ -280,7 +279,6 @@
     object-fit: cover;
     object-position: center;
     z-index: 1;
-    overflow: visible;
     left: unset;
     transform: unset;
   }
