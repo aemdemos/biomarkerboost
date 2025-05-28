@@ -400,17 +400,16 @@ main > div > div {
 main > .section:first-of-type {
   margin-top: 0;
   padding-top: 0;
+  overflow: hidden;
 }
 
 .section[data-background] {
   position: relative;
   margin: 0;
-  padding: 64px 0;
 }
 
 .section[data-theme] {
-  margin: 0;
-  padding-bottom: 5px;
+  margin: 0; 
 }
 
 .section[data-background] picture.section-background-image {
