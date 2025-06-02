@@ -454,10 +454,6 @@ div.section.columns-container p {
   color: var(--c-navy);
 }
 
-div.section.columns-container .columns-img-col {
-  flex: 1;
-}
-
 #main > div.section.cards-container.columns-container > div.columns-wrapper > div > div > div:nth-child(1) > p:nth-child(1) > picture > img {
   width: 268px;
 }
