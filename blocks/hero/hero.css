@@ -208,7 +208,7 @@
 
 @media (width >= 960px) {
   .hero-container > .hero-wrapper {
-    padding: 0;
+    padding-left: 32px;
     display: flex; /* Enable flexbox for side-by-side layout */
     flex-direction: row; /* Ensure text and image are side by side */
     align-items: center; /* Vertically align items */
