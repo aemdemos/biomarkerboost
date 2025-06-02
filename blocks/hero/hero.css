@@ -11,6 +11,10 @@
   padding: 0; /* Remove padding */
 }
 
+.hero.block > div > div:nth-child(1){
+  margin-bottom: 61px;
+}
+
 .hero-container > .hero-wrapper > .hero > div > div:first-child {
   justify-content: center; /* Center the image */
   align-items: center; /* Align the image vertically */
@@ -28,27 +32,308 @@
 }
 
 .hero-container > .hero-wrapper > .hero p {
-  margin: 0 0 10px; /* Adjust spacing */
   font-size: var(--body-font-size-s); /* Match font size */
+}
+
+.hero.home.block {
+  position: relative; /* Ensure proper stacking context */
+  padding: 0; /* Remove default padding */  
+  height: auto;
+  overflow: visible;
+  margin-top: 100px;
+}
+
+#diagnosed-with-ovarian-cancer {
+  font-size: 20px;
+  line-height: 32px;
+  color: white;
+}
+
+#educate-yourself-with-the {
+  font-size: 40px;
+  line-height: 44px;
+  color: white
+}
+
+#biomarkerboost {
+  font-size: 60px;
+  line-height: 100%;
+  margin-bottom: 18px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(1) > h5 {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  margin-bottom: 18px;
+}
+
+#main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(1) > h6 {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--body-font-size-s);
+  line-height: 18px;
+  color: white
+}
+
+#main > div.section.navy-subscript.hero-container > div > div > div > div:nth-child(2) > p:nth-child(2) > sub {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--body-font-size-s);
+  line-height: 18px;
+  color: var(--c-navy);
+}
+
+.hero.block {
+  position: relative; /* Ensure proper stacking context */
+  padding-top: 100px; /* Remove default padding */  
+  height: auto;
+  overflow: visible;
+}
+
+#main > div.section.hero-container > div > div > div > div:nth-child(2) > p:nth-child(1) > picture > img {
+  position: relative;
+  top: unset;
+  bottom: -31px;
+  width: 140%;
+  height: auto;
+  object-fit: unset;
+  overflow: unset;
+  min-height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#main > div.section.hero-container > div > div.hero.block > div > div:nth-child(2) > p:nth-child(1) > picture > img {
+  position: relative;
+  top: unset;
+  bottom: -31px;
+  width: 140%;
+  height: auto;
+  object-fit: unset;
+  overflow: unset;
+  min-height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(2) > p:nth-child(1) > picture > img {
+  position: relative;
+  top: unset;
+  bottom: -31px;
+  width: 140%;
+  height: auto;
+  object-fit: unset;
+  overflow: unset;
+  min-height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#main > div.section.hero-container > div > div > div > div:nth-child(1) > p:nth-child(1) {
+  font-size: 50px;
+  line-height: 55px;
+  color: var(--c-navy);
+  font-style: normal;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+}
+
+#main > div.section.hero-container > div > div.hero.block > div > div:nth-child(1) > p {
+  margin-top: 0;
+  color: var(--c-navy);
+  font-size: 30px;
+  line-height: 36px;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+#main > div.section.hero-container > div > div.hero.block > div > div:nth-child(2) > p:nth-child(2) {
+  position: absolute;
+  top: unset;
+  right: 6px;
+  z-index: 2;
+  color: white;
+}
+
+#main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(2) > p:nth-child(2) {
+  position: absolute;
+  top: unset;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+#about-biomarkers-and-what-they-can-tell-you {
+  font-size: 50px;
+  line-height: 55px;
+  color: var(--c-navy);
+  font-style: normal;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+#see-why-biomarkers-matter-in-ovarian-cancer {
+  font-size: 50px;
+  line-height: 55px;
+  color: var(--c-navy);
+  font-style: normal;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+#know-what-to-expect-with-biomarker-testing {
+  font-size: 50px;
+  line-height: 55px;
+  color: var(--c-navy);
+  font-style: normal;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 18px;
 }
 
 @media (width >= 960px) {
   .hero-container > .hero-wrapper {
-    padding: 0 64px;
+    padding-left: 32px;
     display: flex; /* Enable flexbox for side-by-side layout */
     flex-direction: row; /* Ensure text and image are side by side */
     align-items: center; /* Vertically align items */
     justify-content: space-between; /* Create space between text and image */
   }
-  
+
+  .hero.block > div {
+    height: 500px;
+  }
+
   .hero-container > .hero-wrapper > .hero > div {
     display: flex; /* Enable flexbox for second-level layout */
     flex-direction: row; /* Ensure second-level elements are side by side */
     align-items: center; /* Vertically align items */
   }
-  
+
+  .hero.home.block > div {
+    height: 700px;
+  }
+
   .hero-container > .hero-wrapper > .hero > div > div {
     flex: 1; /* Allow the image container to take up half the space */
     max-width: 50%; /* Restrict image container width */
+  }
+
+  .hero.hero.block > div > div:nth-child(1){
+  margin-bottom: unset;
+  }
+
+  #main > div.section.hero-container > div > div > div > div:nth-child(2) > p:nth-child(2) {
+  position: absolute;
+  bottom: 5px;
+  right:55px;
+  z-index: 2;
+  }
+
+  .hero.home.block {
+    position: relative; /* Ensure proper stacking context */
+    align-content: end;
+    padding: 0; /* Remove default padding */  
+    height: 818px;
+    width: 100%;
+    overflow: visible;
+    margin-top: unset
+  }
+
+  .hero.block {
+    position: relative; /* Ensure proper stacking context */
+    align-content: end;
+    width: 100%;
+    padding: 0; /* Remove default padding */  
+    height: 618px;
+    overflow: visible;
+  }
+
+  #main > div.section.hero-container > div > div.hero.block > div > div:nth-child(2) > p:nth-child(1) > picture > img {
+    position: absolute;
+    top: 38px;
+    bottom: -20px;
+    right: -57px;
+    width: 560px;
+    height: 97%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    left: unset;
+    transform: unset;
+  }
+
+  #main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(2) > p:nth-child(1) > picture > img {
+    position: absolute;
+    top: 40px;
+    bottom: -20px;
+    right: -55px;
+    width: 560px;
+    height: 97.5%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    left: unset;
+    transform: unset;
+  }
+
+  #diagnosed-with-ovarian-cancer {
+    font-size: 30px;
+    line-height: 100%;
+    color: white;
+  }
+
+  #educate-yourself-with-the {
+    font-size: 48px;
+    line-height: 100%;
+    margin-bottom: 12px;
+    margin-left: -2px;
+    color: white;
+  }
+
+  #biomarkerboost {
+    font-size: 110px;
+    line-height: 96px;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-left: -4px;
+    margin-bottom: 18px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  #main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(1) > h5 {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    margin-bottom: 18px;
+  }
+
+  #main > div.section.hero-container > div > div.hero.home.block > div > div:nth-child(1) > h6 {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: white
   }
 }
