@@ -78,9 +78,18 @@
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 12px;
+  font-size: var(--body-font-size-s);
   line-height: 18px;
   color: white
+}
+
+#main > div.section.navy-subscript.hero-container > div > div > div > div:nth-child(2) > p:nth-child(2) > sub {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--body-font-size-s);
+  line-height: 18px;
+  color: var(--c-navy);
 }
 
 .hero.block {
