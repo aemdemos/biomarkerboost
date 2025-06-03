@@ -25,4 +25,9 @@
     flex: 1;
     order: unset;
   }
+  
+  .columns.thumbnail .columns-img-col {
+    flex: 0;
+    order: unset;
+  }
 }

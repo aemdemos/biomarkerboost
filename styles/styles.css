@@ -22,6 +22,7 @@
   --c-navy: #004b6e;
   --c-soft-black: #1b252c;
   --c-teal: #88d7d4;
+  --c-light-teal: #b9e7e5;
   --c-deep-teal: #00727f;
   --c-light-salmon: #fdefe7;
   --c-light-pink: #efeff7;
@@ -333,6 +334,8 @@ main img {
   width: 100%;
   height: 1px;
   background-color: #b6b7da;
+  margin-bottom: 48px;
+  margin-top: 48px;
 }
 
 .icon {
@@ -417,6 +420,18 @@ main > .section:first-of-type {
   inset: 0;
 }
 
+div.section.columns-container .eyebrow {
+  color: var(--c-citrus);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-top: 0;
+}
+
+div.section.columns-container img {
+  width: 100px;
+}
+
 .section[data-background] picture.section-background-image img {
   width: 100%;
   height: 100%;
@@ -433,6 +448,39 @@ main > .section:first-of-type {
   & h1 {
     color: var(--c-teal);
   }
+}
+
+div.section.columns-container p {
+  color: var(--c-navy);
+}
+
+#main > div.section.cards-container.columns-container > div.columns-wrapper > div > div > div:nth-child(1) > p:nth-child(1) > picture > img {
+  width: 268px;
+}
+
+#main > div.section.cards-container.columns-container > div.columns-wrapper > div > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+#main > div.section.cards-container.columns-container > div.columns-wrapper > div > div > div:nth-child(2) {
+    background-color: var(--c-light-teal);
+    border-radius: 30px;
+    padding: 36px;
+    color: var(--c-navy);
+}
+
+.columns.teal-2.block.columns-2-cols {
+  margin-top: 64px;
+}
+
+.columns.teal-2.block.columns-2-cols p:nth-child(1) {
+  margin: 0;
+}
+
+.columns.teal-2.block.columns-2-cols ul li {
+  margin-bottom: 11px;
 }
 
 @media (width >= 768px) {
